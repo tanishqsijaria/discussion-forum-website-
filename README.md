@@ -1,126 +1,117 @@
-﻿# Gamer''s Forum - Enterprise Gaming Community Platform
+<div align="center">
+
+# 🎮 Gamer's Forum
+
+### *Enterprise Gaming Community Platform*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4.4%2B-green)](https://www.mongodb.com/)
-[![Express.js](https://img.shields.io/badge/Express.js-4.18.2-lightgrey)](https://expressjs.com/)
-[![React](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-4.4.5-purple)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.4%2B-green.svg)](https://www.mongodb.com/)
+[![Express.js](https://img.shields.io/badge/Express-4.18.2-lightgrey.svg)](https://expressjs.com/)
+[![React](https://img.shields.io/badge/React-18.2.0-61dafb.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.4.5-646cff.svg)](https://vitejs.dev/)
 
-A production-grade, full-stack gaming community platform architected with the MERN (MongoDB, Express.js, React, Node.js) stack. This enterprise-level application enables gamers worldwide to engage in discussions, join competitive clans, participate in events, watch live streams, and stay updated with gaming news through an immersive, responsive interface.
+**A production-grade, full-stack gaming community platform built with the MERN stack**
 
-<div align="center">
-  <img src="frontend/public/Home.png" alt="Home Dashboard" width="100%"/>
-  <p><em>Immersive Star Wars-themed home dashboard with path selection and community features</em></p>
+[Features](#-key-features) • [Screenshots](#-application-showcase) • [Installation](#-quick-start) • [Documentation](#-documentation) • [API](#-api-reference)
+
+---
+
+![Home Dashboard](frontend/public/Home.png)
+
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 📖 Overview
 
-- [Features Overview](#-features-overview)
-- [Visual Showcase](#-visual-showcase)
-- [Architecture](#-architecture)
-- [Technology Stack](#-technology-stack)
-- [Data Model](#-data-model)
-- [Security](#-security)
-- [API Documentation](#-api-documentation)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Running the Application](#-running-the-application)
-- [Testing](#-testing)
-- [Performance](#-performance)
-- [Deployment](#-deployment)
-- [Contributing](#-contributing)
+**Gamer's Forum** is an enterprise-level gaming community platform that brings gamers together through engaging discussions, competitive clans, live events, and real-time streaming. Built with modern web technologies and best practices, it demonstrates production-ready architecture, security, and scalability.
+
+<div align="center">
+
+### 🎯 **Built For**
+
+Competitive Gamers • Content Creators • Gaming Communities • Esports Teams
+
+</div>
 
 ---
 
-## 🎯 Features Overview
+## ✨ Key Features
 
-### Core Platform Capabilities
+<table>
+<tr>
+<td width="50%">
 
-✅ **User Authentication System**
+### 🔐 **Secure Authentication**
 - JWT-based stateless authentication
-- Secure password hashing (bcrypt, 10 rounds)
-- Protected routes (client & server-side)
-- Session persistence via localStorage
+- bcrypt password hashing (10 rounds)
+- Protected routes & API endpoints
+- Session persistence
 
-✅ **Discussion Forums**
-- Create and share gaming posts
-- Threaded comment system
-- Real-time content updates
-- User-specific post management
+### 💬 **Discussion Forums**
+- Game-specific discussion boards
+- Threaded comments system
+- Real-time post updates
+- Rich text content support
 
-✅ **Gaming Clans System**
-- Tier-based rankings (Gold, Silver, Bronze, Platinum)
-- Clan discovery and search
-- Member statistics and leaderboards
-- Game-specific clan associations
+### ⚔️ **Gaming Clans**
+- Tier-based rankings (Gold/Silver/Bronze/Platinum)
+- Member statistics & leaderboards
+- Clan discovery & search
+- Game-specific associations
 
-✅ **Events Platform**
-- Gaming conventions and tournaments
-- Charity streams and fundraisers
-- RSVP and registration system
-- Event categorization and filtering
+</td>
+<td width="50%">
 
-✅ **Live Streaming Hub**
-- Stream discovery and browsing
+### 🎪 **Events & Tournaments**
+- Gaming conventions
+- Online tournaments
+- Charity streams
+- RSVP & registration system
+
+### 📺 **Live Streaming Hub**
+- Stream discovery & browsing
 - Real-time viewer counts
 - Streamer profiles
 - Game category filters
 
-✅ **News & Content**
-- Gaming news and updates
-- Game reviews and guides
-- Article management system
+### 📰 **News & Content**
+- Gaming news & updates
+- Game reviews & guides
+- Article management
 - Category-based filtering
 
+</td>
+</tr>
+</table>
+
 ---
 
-## 🎨 Visual Showcase
+## 🎨 Application Showcase
 
-### Authentication Flow
+<div align="center">
+
+### Authentication System
 
 <table>
 <tr>
-<td width="50%" align="center">
+<td width="50%">
 
-### 🔐 Login Page
-<img src="frontend/public/Login.png" alt="Login Page" width="90%"/>
+**🔑 Login**
 
-**Features:**
-- Clean, centered login form
-- Email and password validation
-- JWT token generation
-- Error handling with user feedback
-- Gradient background with glassmorphism effect
-- Responsive design for all devices
+<img src="frontend/public/Login.png" alt="Login Page" width="100%"/>
 
-**Security:**
-- Password field masking
-- HTTPS recommended for production
-- Rate limiting ready
-- CORS protection
+*Secure JWT authentication with elegant UI*
 
 </td>
-<td width="50%" align="center">
+<td width="50%">
 
-### ✍️ Sign Up Page
-<img src="frontend/public/Signup.png" alt="Sign Up Page" width="90%"/>
+**✍️ Sign Up**
 
-**Features:**
-- Username, email, and password registration
-- Real-time validation
-- Unique email/username checking
-- Password strength requirements
-- Automatic login after registration
-- Clean error messaging
+<img src="frontend/public/Signup.png" alt="Sign Up Page" width="100%"/>
 
-**Implementation:**
-- bcrypt password hashing (10 rounds)
-- Mongoose schema validation
-- Duplicate detection via unique indexes
-- JWT token generation on success
+*User registration with validation*
 
 </td>
 </tr>
@@ -128,470 +119,467 @@ A production-grade, full-stack gaming community platform architected with the ME
 
 ---
 
-### Main Platform Pages
+### Main Features
 
-<table>
-<tr>
-<td colspan="2" align="center">
+**🏠 Home Dashboard**
 
-### 🏠 Home Dashboard
 <img src="frontend/public/Home.png" alt="Home Dashboard" width="100%"/>
 
-**Key Components:**
-1. **Star Wars-Themed Hero Section**
-   - Three philosophical paths: Sith (Red), Republic (Green), Jedi (Blue)
-   - Interactive faction selection
-   - Animated lightsaber effects
-   - Immersive starfield background
+*Immersive Star Wars-themed dashboard with path selection, popular forums, and discussion feed*
 
-2. **Popular Forums Grid**
-   - 6 featured forum cards with game backgrounds
-   - Member counts and engagement metrics
-   - Quick access to discussions
-   - Icon-based game identification
-
-3. **Latest Discussions Feed**
-   - Real-time post updates
-   - Create post functionality
-   - User avatars (Dicebear API)
-   - Comment threading
-
-4. **Sidebar Widgets**
-   - Trending posts
-   - Clan quick links
-   - Community statistics
-
-</td>
-</tr>
-</table>
+---
 
 <table>
 <tr>
-<td width="50%" align="center">
+<td width="33%">
 
-### 💬 Forums Page
-<img src="frontend/public/Forums.png" alt="Forums Page" width="90%"/>
+**💬 Forums**
 
-**Game Categories:**
-- **Hogwarts Legacy**: Butterflies locations (10.5k members)
-- **Red Dead Redemption**: RDR 2 Community Hub (14.6k members)
-- **Sims 4**: Cheat codes (9.2k members)
-- **The Witcher 3**: Armor drawings (50.7k members)
-- **Minecraft**: Achievements guide (7.3k members)
-- **Little Nightmares**: Gameplay tips (6.1k members)
+<img src="frontend/public/Forums.png" alt="Forums" width="100%"/>
 
-**Features:**
-- Game-specific discussion boards
-- Filter by game titles
-- Member and post statistics
-- Latest activity timestamps
-- Rich topic cards with background images
-- Icon-based game identification
+*Game-specific boards*
 
 </td>
-<td width="50%" align="center">
+<td width="33%">
 
-### ⚔️ Clans Page
-<img src="frontend/public/Clans.png" alt="Clans Page" width="90%"/>
+**⚔️ Clans**
 
-**Featured Clans:**
-1. **Silver Wolves** (Gold Tier)
-   - 200.3k members
-   - RPG & adventure focus
-   - Games: Hogwarts Legacy, The Witcher 3, Elden Ring
+<img src="frontend/public/Clans.png" alt="Clans" width="100%"/>
 
-2. **Phoenix Rising** (Silver Tier)
-   - 80.4k members
-   - Competitive FPS clan
-   - Games: Call of Duty, Fortnite, Apex Legends
+*Competitive gaming clans*
 
-3. **Thunder Legion** (Platinum Tier)
-   - 150.1k members
-   - Racing specialists
-   - Games: Forza, Gran Turismo, Driveclub
+</td>
+<td width="33%">
 
-**Functionality:**
-- Tier-based filtering
-- Search by clan name or game
-- One-click join system
-- Member count tracking
+**🎪 Events**
+
+<img src="frontend/public/Events.png" alt="Events" width="100%"/>
+
+*Tournaments & conventions*
 
 </td>
 </tr>
 <tr>
-<td width="50%" align="center">
+<td width="33%">
 
-### 🎪 Events Page
-<img src="frontend/public/Events.png" alt="Events Page" width="90%"/>
+**📺 Streams**
 
-**Event Categories:**
-- **Conventions**: Comic-Con International Gaming Expo
-  - San Diego Convention Center
-  - 10:00 AM start time
-  - 12.8k participants
+<img src="frontend/public/Streams.png" alt="Streams" width="100%"/>
 
-- **Charity**: Gaming Charity Stream
-  - Online event
-  - 12:00 PM start time
-  - 8.9k participants
-  - 24-hour stream for gaming charities
-
-**Features:**
-- Filter: Upcoming, Past, All Events
-- Event type badges (Convention, Charity)
-- Location information
-- Participant statistics
-- Event registration/RSVP
-- Detailed event descriptions
+*Live gaming streams*
 
 </td>
-<td width="50%" align="center">
+<td width="33%">
 
-### 📺 Streams Page
-<img src="frontend/public/Streams.png" alt="Streams Page" width="90%"/>
+**📰 News**
 
-**Stream Features:**
-- Live indicator badges
-- Real-time viewer counts
-- Streamer profile information
-- Game being played
-- Follower statistics
-- Quick access to stream
+<img src="frontend/public/News.png" alt="News" width="100%"/>
 
-**Categories:**
-- FPS Streams
-- RPG Playthroughs
-- Speedruns
-- E-sports Tournaments
-- Casual Gaming
-- IRL Gaming Content
-
-**Integration:**
-- Embedded stream players
-- Chat integration
-- Clip sharing
-- Follow/subscribe functionality
+*Gaming news & reviews*
 
 </td>
-</tr>
-<tr>
-<td colspan="2" align="center">
+<td width="33%">
 
-### 📰 News Page
-<img src="frontend/public/News.png" alt="News Page" width="90%"/>
+**🎯 More Features**
 
-**Content Types:**
-- **Industry News**: Game announcements, studio updates, platform news
-- **Game Reviews**: In-depth analysis, scoring, recommendations
-- **Guides & Tutorials**: Strategy guides, walkthroughs, tips
-- **Community Spotlights**: User-generated content features
+Coming soon...
 
-**Features:**
-- Article cards with featured images
-- Author attribution
-- Publication timestamps
-- Read time estimates
-- Category tags
-- Search and filter functionality
-- Related articles sidebar
-- Social sharing
+*Future enhancements*
 
 </td>
 </tr>
 </table>
+
+</div>
 
 ---
 
 ## 🏗️ Architecture
 
+<div align="center">
+
+```mermaid
+graph TB
+    subgraph "Client Layer"
+        A[React 18 SPA]
+        B[React Router v6]
+        C[Context API]
+        D[Axios Client]
+    end
+    
+    subgraph "Application Layer"
+        E[Express.js Server]
+        F[JWT Middleware]
+        G[CORS Handler]
+        H[Error Handler]
+    end
+    
+    subgraph "Data Layer"
+        I[MongoDB]
+        J[Mongoose ODM]
+    end
+    
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> J
+    J --> I
+```
+
 ### Three-Tier Architecture Pattern
 
-```
-┌───────────────────────────────────────────────────────────────────────┐
-│                       PRESENTATION LAYER (Tier 1)                     │
-│  ┌─────────────────────────────────────────────────────────────────┐  │
-│  │  React 18 Single Page Application                               │  │
-│  │  • React Router v6: Client-side routing                         │  │
-│  │  • Context API: Global state (AuthContext)                      │  │
-│  │  • Axios: HTTP client with interceptors                         │  │
-│  │  • Vite: Build tooling (HMR, fast refresh)                      │  │
-│  │                                                                  │  │
-│  │  Pages: Home, Login, Signup, Forums, Clans, Events, Streams,    │  │
-│  │         News                                                     │  │
-│  │  Components: CreatePostForm, PostCard, ProtectedRoute,          │  │
-│  │              Sidebar                                             │  │
-│  └─────────────────────────────────────────────────────────────────┘  │
-└───────────────────────────────────────────────────────────────────────┘
-                              ↕ HTTPS/REST API (JSON)
-┌───────────────────────────────────────────────────────────────────────┐
-│                      APPLICATION LAYER (Tier 2)                       │
-│  ┌─────────────────────────────────────────────────────────────────┐  │
-│  │  Express.js REST API Server                                     │  │
-│  │  • MVC Architecture Pattern                                     │  │
-│  │  • Routes: /api/users, /api/posts                               │  │
-│  │  • Controllers: authController, postController                  │  │
-│  │  • Middleware: authMiddleware (JWT verification)                │  │
-│  │  • CORS: Cross-origin resource sharing                          │  │
-│  │  • Error Handling: Centralized error middleware                 │  │
-│  └─────────────────────────────────────────────────────────────────┘  │
-└───────────────────────────────────────────────────────────────────────┘
-                          ↕ MongoDB Driver (Mongoose ODM)
-┌───────────────────────────────────────────────────────────────────────┐
-│                         DATA LAYER (Tier 3)                           │
-│  ┌─────────────────────────────────────────────────────────────────┐  │
-│  │  MongoDB Database (NoSQL Document Store)                        │  │
-│  │  • Collections: users, posts                                    │  │
-│  │  • Mongoose: Schema validation, middleware, methods             │  │
-│  │  • Embedded Comments: Denormalized for read performance         │  │
-│  │  • Indexes: Unique (username, email), Standard (author)         │  │
-│  │  • Population: Automatic JOIN via ObjectId references           │  │
-│  └─────────────────────────────────────────────────────────────────┘  │
-└───────────────────────────────────────────────────────────────────────┘
-```
-
-### Request/Response Flow
+</div>
 
 ```
-User Action (Click "Create Post")
-    ↓
-React Component (CreatePostForm)
-    ↓
-Axios POST Request
-    ↓
-Axios Interceptor (Adds JWT Token)
-    ↓
-Express Route (/api/posts)
-    ↓
-Auth Middleware (Verifies Token)
-    ↓
-Controller (postController.createPost)
-    ↓
-Mongoose Model (Post.create)
-    ↓
-MongoDB (Document Inserted)
-    ↓
-Response with Populated Data
-    ↓
-React State Update (setPosts)
-    ↓
-UI Re-renders with New Post
+┌─────────────────────────────────────────┐
+│     PRESENTATION LAYER (Tier 1)         │
+│  • React 18 with Hooks                  │
+│  • React Router v6                      │
+│  • Context API State Management         │
+│  • Axios HTTP Client                    │
+└─────────────────────────────────────────┘
+              ↕ REST API
+┌─────────────────────────────────────────┐
+│     APPLICATION LAYER (Tier 2)          │
+│  • Express.js Server                    │
+│  • JWT Authentication                   │
+│  • MVC Architecture                     │
+│  • Error Handling Middleware            │
+└─────────────────────────────────────────┘
+              ↕ Mongoose ODM
+┌─────────────────────────────────────────┐
+│        DATA LAYER (Tier 3)              │
+│  • MongoDB Database                     │
+│  • Schema Validation                    │
+│  • Indexed Queries                      │
+│  • Document Relationships               │
+└─────────────────────────────────────────┘
 ```
 
 ---
 
-## 💾 Data Model & Database Design
+## 💾 Data Model
+
+<div align="center">
 
 ### Entity Relationship Diagram
 
+</div>
+
 ```
-┌─────────────────────────────────────┐
-│             Users                   │
-│─────────────────────────────────────│
-│ _id: ObjectId (PK)                  │
-│ username: String (unique, indexed)  │
-│ email: String (unique, indexed)     │
-│ password: String (bcrypt hashed)    │
-│ createdAt: DateTime (auto)          │
-│ updatedAt: DateTime (auto)          │
-└─────────────────────────────────────┘
-              │
-              │ 1:N (author relationship)
-              │
-              ↓
-┌─────────────────────────────────────┐
-│             Posts                   │
-│─────────────────────────────────────│
-│ _id: ObjectId (PK)                  │
-│ title: String (required)            │
-│ content: String (required)          │
-│ author: ObjectId (FK → Users)       │
-│ comments: [Comment] (embedded)      │
-│ createdAt: DateTime (auto)          │
-│ updatedAt: DateTime (auto)          │
-└─────────────────────────────────────┘
-              │
-              │ 1:N (embedded subdocuments)
-              │
-              ↓
-┌─────────────────────────────────────┐
-│          Comments (Embedded)        │
-│─────────────────────────────────────│
-│ _id: ObjectId (auto)                │
-│ content: String (required)          │
-│ author: ObjectId (FK → Users)       │
-│ createdAt: DateTime (auto)          │
-│ updatedAt: DateTime (auto)          │
-└─────────────────────────────────────┘
-```
-
-### Schema Definitions
-
-#### User Schema (models/User.js)
-```javascript
-{
-  username: { 
-    type: String, 
-    required: true, 
-    unique: true 
-  },
-  email: { 
-    type: String, 
-    required: true, 
-    unique: true 
-  },
-  password: { 
-    type: String, 
-    required: true 
-  },
-  timestamps: true
-}
-
-// Pre-save hook: Hash password before saving
-userSchema.pre(''save'', async function(next) {
-  if (!this.isModified(''password'')) return next();
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-});
-
-// Instance method: Compare password
-userSchema.methods.matchPassword = async function(enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
-};
-```
-
-#### Post Schema (models/Post.js)
-```javascript
-{
-  title: { 
-    type: String, 
-    required: true 
-  },
-  content: { 
-    type: String, 
-    required: true 
-  },
-  author: { 
-    type: mongoose.Schema.Types.ObjectId, 
-    ref: ''User'', 
-    required: true 
-  },
-  comments: [commentSchema],  // Embedded array
-  timestamps: true
-}
-
-// Comment subdocument schema
-const commentSchema = {
-  content: { type: String, required: true },
-  author: { type: mongoose.Schema.Types.ObjectId, ref: ''User'', required: true },
-  timestamps: true
-};
-```
-
-### Indexing Strategy
-
-**Implemented Indexes:**
-- `username`: Unique index for fast user lookups
-- `email`: Unique index for authentication
-- `author`: Standard index for user-specific post queries
-
-**Query Optimization:**
-```javascript
-// Population for efficient JOIN operations
-Post.find()
-  .populate(''author'', ''username'')           // Fetch author name
-  .populate(''comments.author'', ''username'')  // Fetch comment authors
-  .sort({ createdAt: -1 });                   // Newest first
+┌──────────────────────────┐
+│        Users             │
+├──────────────────────────┤
+│ 🔑 _id (PK)              │
+│ 👤 username (unique)     │
+│ 📧 email (unique)        │
+│ 🔒 password (hashed)     │
+│ 📅 createdAt             │
+│ 📅 updatedAt             │
+└──────────────────────────┘
+           │
+           │ 1:N
+           ↓
+┌──────────────────────────┐
+│        Posts             │
+├──────────────────────────┤
+│ 🔑 _id (PK)              │
+│ 📝 title                 │
+│ 📄 content               │
+│ 👤 author (FK)           │
+│ 💬 comments[]            │
+│ 📅 createdAt             │
+│ 📅 updatedAt             │
+└──────────────────────────┘
+           │
+           │ 1:N (embedded)
+           ↓
+┌──────────────────────────┐
+│      Comments            │
+├──────────────────────────┤
+│ 🔑 _id                   │
+│ 💬 content               │
+│ 👤 author (FK)           │
+│ 📅 createdAt             │
+└──────────────────────────┘
 ```
 
 ---
 
-## 🔒 Security Implementation
+## 🔒 Security
 
-### Authentication Flow Diagram
+<div align="center">
+
+### Security Implementation Checklist
+
+</div>
+
+| Security Feature | Implementation | Status |
+|:-----------------|:---------------|:------:|
+| **Password Hashing** | bcrypt (10 rounds) | ✅ |
+| **JWT Authentication** | HS256, 30-day expiry | ✅ |
+| **Route Protection** | Client & Server guards | ✅ |
+| **CORS Configuration** | Whitelist origins | ✅ |
+| **XSS Prevention** | React auto-escaping | ✅ |
+| **NoSQL Injection** | Mongoose sanitization | ✅ |
+| **Input Validation** | Schema validation | ✅ |
+| **Rate Limiting** | express-rate-limit | 🔶 Recommended |
+| **Helmet.js** | Security headers | 🔶 Recommended |
+| **HTTPS/SSL** | TLS certificates | 🔶 Production |
+
+<details>
+<summary><b>🔐 View Authentication Flow</b></summary>
 
 ```
-┌──────────┐          ┌──────────┐          ┌───────────┐
-│  Client  │          │  Server  │          │ Database  │
-└────┬─────┘          └────┬─────┘          └─────┬─────┘
-     │                     │                       │
-     │ POST /api/users/    │                       │
-     │ signup              │                       │
-     ├────────────────────>│                       │
-     │ {username, email,   │                       │
-     │  password}          │                       │
-     │                     │                       │
-     │                     │ 1. Validate input     │
-     │                     │ 2. Check duplicates   │
-     │                     ├──────────────────────>│
-     │                     │<──────────────────────┤
-     │                     │                       │
-     │                     │ 3. Hash password      │
-     │                     │    bcrypt.genSalt(10) │
-     │                     │    bcrypt.hash()      │
-     │                     │                       │
-     │                     │ 4. Save user          │
-     │                     ├──────────────────────>│
-     │                     │<──────────────────────┤
-     │                     │                       │
-     │                     │ 5. Generate JWT       │
-     │                     │    jwt.sign({id},     │
-     │                     │    SECRET, {          │
-     │                     │    expiresIn: ''30d''}) │
-     │                     │                       │
-     │<────────────────────┤                       │
-     │ {token, user}       │                       │
-     │                     │                       │
-     │ Store in localStorage                       │
-     │                     │                       │
-     │                     │                       │
-     │ GET /api/posts      │                       │
-     │ Authorization:      │                       │
-     │ Bearer <JWT>        │                       │
-     ├────────────────────>│                       │
-     │                     │                       │
-     │                     │ 6. Extract token      │
-     │                     │ 7. jwt.verify(token,  │
-     │                     │    SECRET)            │
-     │                     │ 8. Decode {id}        │
-     │                     │ 9. Fetch user         │
-     │                     ├──────────────────────>│
-     │                     │<──────────────────────┤
-     │                     │ 10. Attach req.user   │
-     │                     │ 11. Execute handler   │
-     │                     │                       │
-     │<────────────────────┤                       │
-     │ {posts: [...]}      │                       │
+┌─────────┐          ┌──────────┐          ┌──────────┐
+│ Client  │          │  Server  │          │ Database │
+└────┬────┘          └────┬─────┘          └────┬─────┘
+     │                    │                      │
+     │  POST /signup      │                      │
+     ├──────────────────> │                      │
+     │                    │  Hash Password       │
+     │                    │  (bcrypt)            │
+     │                    │                      │
+     │                    │  Save User           │
+     │                    ├────────────────────> │
+     │                    │ <────────────────────┤
+     │                    │                      │
+     │                    │  Generate JWT        │
+     │                    │  (30d expiry)        │
+     │                    │                      │
+     │ <──────────────────┤                      │
+     │  {token, user}     │                      │
+     │                    │                      │
+     │  GET /posts        │                      │
+     │  Bearer <JWT>      │                      │
+     ├──────────────────> │                      │
+     │                    │  Verify Token        │
+     │                    │  Decode Payload      │
+     │                    │                      │
+     │                    │  Fetch Data          │
+     │                    ├────────────────────> │
+     │                    │ <────────────────────┤
+     │ <──────────────────┤                      │
+     │  {posts}           │                      │
 ```
 
-### Security Layers
-
-| Layer | Implementation | Status |
-|-------|---------------|--------|
-| **Password Security** | bcrypt hashing, 10 salt rounds | ✅ Implemented |
-| **JWT Authentication** | HS256, 30-day expiry, SECRET key | ✅ Implemented |
-| **Route Protection** | ProtectedRoute component (client) | ✅ Implemented |
-| **API Protection** | authMiddleware (server) | ✅ Implemented |
-| **CORS** | Configured for localhost:3000 | ✅ Implemented |
-| **XSS Prevention** | React auto-escaping | ✅ Implemented |
-| **NoSQL Injection** | Mongoose parameterized queries | ✅ Implemented |
-| **Rate Limiting** | express-rate-limit | ⚠️ Recommended |
-| **Helmet.js** | Security headers | ⚠️ Recommended |
-| **HTTPS** | SSL/TLS certificates | ⚠️ Production Required |
+</details>
 
 ---
 
-## 📚 API Documentation
+## 🛠️ Technology Stack
+
+<div align="center">
+
+### Frontend Technologies
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+
+### Backend Technologies
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
+
+### Testing & Tools
+
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+</div>
+
+<table>
+<tr>
+<th>Category</th>
+<th>Technology</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td rowspan="5"><b>Frontend</b></td>
+<td>React</td>
+<td>18.2.0</td>
+<td>UI library with hooks</td>
+</tr>
+<tr>
+<td>React Router DOM</td>
+<td>6.15.0</td>
+<td>Client-side routing</td>
+</tr>
+<tr>
+<td>Axios</td>
+<td>1.5.0</td>
+<td>HTTP client</td>
+</tr>
+<tr>
+<td>Vite</td>
+<td>4.4.5</td>
+<td>Build tool & dev server</td>
+</tr>
+<tr>
+<td>Playwright</td>
+<td>1.56.1</td>
+<td>E2E testing</td>
+</tr>
+<tr>
+<td rowspan="6"><b>Backend</b></td>
+<td>Node.js</td>
+<td>16+</td>
+<td>JavaScript runtime</td>
+</tr>
+<tr>
+<td>Express.js</td>
+<td>4.18.2</td>
+<td>Web framework</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>4.4+</td>
+<td>NoSQL database</td>
+</tr>
+<tr>
+<td>Mongoose</td>
+<td>7.5.0</td>
+<td>MongoDB ODM</td>
+</tr>
+<tr>
+<td>jsonwebtoken</td>
+<td>9.0.2</td>
+<td>JWT tokens</td>
+</tr>
+<tr>
+<td>bcryptjs</td>
+<td>2.4.3</td>
+<td>Password hashing</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+<div align="center">
+
+### Prerequisites
+
+Ensure you have these installed:
+
+![Node.js](https://img.shields.io/badge/Node.js-v16+-339933?style=flat-square&logo=node.js)
+![npm](https://img.shields.io/badge/npm-v7+-CB3837?style=flat-square&logo=npm)
+![MongoDB](https://img.shields.io/badge/MongoDB-v4.4+-47A248?style=flat-square&logo=mongodb)
+![Git](https://img.shields.io/badge/Git-latest-F05032?style=flat-square&logo=git)
+
+</div>
+
+### Installation Steps
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/tanishqsijaria/discussion-forum-website-.git
+cd full-stack-final-project
+
+# 2️⃣ Install backend dependencies
+cd backend
+npm install
+
+# 3️⃣ Install frontend dependencies
+cd ../frontend
+npm install
+```
+
+### Configuration
+
+Create `.env` file in the **backend** directory:
+
+```env
+# Server Configuration
+NODE_ENV=development
+PORT=5000
+
+# Database
+MONGO_URI=mongodb://localhost:27017/discussion-forum
+
+# JWT Secret (Change in production!)
+JWT_SECRET=your_super_secret_jwt_key_minimum_32_characters
+JWT_EXPIRE=30d
+
+# CORS
+CORS_ORIGIN=http://localhost:3000
+```
+
+### Run the Application
+
+<table>
+<tr>
+<td width="50%">
+
+**🔷 Terminal 1 - Backend**
+
+```bash
+cd backend
+npm run dev
+```
+
+✅ Server running on port 5000
+
+</td>
+<td width="50%">
+
+**🔷 Terminal 2 - Frontend**
+
+```bash
+cd frontend
+npm run dev
+```
+
+✅ Frontend running on port 3000
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+### 🌐 Access Points
+
+**Frontend:** http://localhost:3000  
+**Backend API:** http://localhost:5000/api  
+
+</div>
+
+---
+
+## 📚 API Reference
+
+<div align="center">
 
 ### Base URL
+
 ```
 Development: http://localhost:5000/api
 Production: https://your-domain.com/api
 ```
 
-### Authentication Endpoints
+</div>
 
-#### POST /api/users/signup
-Register a new user
+<details>
+<summary><b>🔐 Authentication Endpoints</b></summary>
+
+### Register User
+
+```http
+POST /api/users/signup
+Content-Type: application/json
+```
 
 **Request Body:**
 ```json
@@ -602,7 +590,7 @@ Register a new user
 }
 ```
 
-**Response (201 Created):**
+**Response (201):**
 ```json
 {
   "_id": "64f1234567890abcdef12345",
@@ -613,8 +601,14 @@ Register a new user
 }
 ```
 
-#### POST /api/users/login
-Authenticate existing user
+---
+
+### Login User
+
+```http
+POST /api/users/login
+Content-Type: application/json
+```
 
 **Request Body:**
 ```json
@@ -624,7 +618,7 @@ Authenticate existing user
 }
 ```
 
-**Response (200 OK):**
+**Response (200):**
 ```json
 {
   "_id": "64f1234567890abcdef12345",
@@ -634,408 +628,229 @@ Authenticate existing user
 }
 ```
 
-### Post Endpoints
+</details>
 
-#### GET /api/posts
-Retrieve all posts (sorted by newest first)
+<details>
+<summary><b>💬 Post Endpoints</b></summary>
 
-**Headers:** None required
+### Get All Posts
 
-**Response (200 OK):**
+```http
+GET /api/posts
+```
+
+**Response (200):**
 ```json
 [
   {
     "_id": "64f1234567890abcdef12346",
     "title": "Best RPG Games of 2024",
-    "content": "Let''s discuss the top RPG releases this year...",
+    "content": "Let's discuss the top RPG releases...",
     "author": {
       "_id": "64f1234567890abcdef12345",
       "username": "gamer123"
     },
-    "comments": [
-      {
-        "_id": "64f1234567890abcdef12347",
-        "content": "Great list! I''d add Baldur''s Gate 3",
-        "author": {
-          "_id": "64f1234567890abcdef12348",
-          "username": "rpgfan"
-        },
-        "createdAt": "2024-01-10T11:15:00.000Z"
-      }
-    ],
-    "createdAt": "2024-01-10T11:00:00.000Z",
-    "updatedAt": "2024-01-10T11:15:00.000Z"
+    "comments": [...],
+    "createdAt": "2024-01-10T11:00:00.000Z"
   }
 ]
 ```
 
-#### POST /api/posts
-Create a new post
+---
 
-**Headers:**
-```
+### Create Post
+
+```http
+POST /api/posts
 Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
 ```
 
 **Request Body:**
 ```json
 {
-  "title": "Cyberpunk 2077 Phantom Liberty Review",
-  "content": "The expansion brings significant improvements to the base game..."
+  "title": "Cyberpunk 2077 Review",
+  "content": "The expansion brings improvements..."
 }
 ```
 
-**Response (201 Created):**
-```json
-{
-  "_id": "64f1234567890abcdef12349",
-  "title": "Cyberpunk 2077 Phantom Liberty Review",
-  "content": "The expansion brings significant improvements...",
-  "author": {
-    "_id": "64f1234567890abcdef12345",
-    "username": "gamer123"
-  },
-  "comments": [],
-  "createdAt": "2024-01-10T12:00:00.000Z",
-  "updatedAt": "2024-01-10T12:00:00.000Z"
-}
-```
+---
 
-#### POST /api/posts/:id/comments
-Add a comment to a post
+### Add Comment
 
-**Headers:**
-```
+```http
+POST /api/posts/:id/comments
 Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
 ```
 
 **Request Body:**
 ```json
 {
-  "content": "Excellent review! I agree with your points."
+  "content": "Great review!"
 }
 ```
 
-**Response (201 Created):**
-```json
-{
-  "_id": "64f1234567890abcdef12349",
-  "title": "Cyberpunk 2077 Phantom Liberty Review",
-  "content": "The expansion brings significant improvements...",
-  "author": { ... },
-  "comments": [
-    {
-      "_id": "64f1234567890abcdef1234a",
-      "content": "Excellent review! I agree with your points.",
-      "author": {
-        "_id": "64f1234567890abcdef1234b",
-        "username": "reviewer456"
-      },
-      "createdAt": "2024-01-10T12:30:00.000Z"
-    }
-  ],
-  "createdAt": "2024-01-10T12:00:00.000Z",
-  "updatedAt": "2024-01-10T12:30:00.000Z"
-}
-```
+</details>
 
-### HTTP Status Codes
+<details>
+<summary><b>📊 HTTP Status Codes</b></summary>
 
-| Code | Meaning | Usage |
-|------|---------|-------|
-| 200 | OK | Successful GET requests |
-| 201 | Created | Successful POST (resource created) |
-| 400 | Bad Request | Invalid input, validation errors |
-| 401 | Unauthorized | Missing or invalid JWT token |
-| 404 | Not Found | Resource doesn''t exist |
-| 500 | Internal Server Error | Server-side errors |
+| Code | Status | Description |
+|:----:|:-------|:------------|
+| 200 | ✅ OK | Successful GET request |
+| 201 | ✅ Created | Resource created successfully |
+| 400 | ❌ Bad Request | Invalid input data |
+| 401 | ❌ Unauthorized | Missing/invalid token |
+| 404 | ❌ Not Found | Resource not found |
+| 500 | ❌ Server Error | Internal server error |
 
----
-
-## 🛠️ Technology Stack
-
-### Frontend Technologies
-
-| Technology | Version | Purpose | Documentation |
-|-----------|---------|---------|---------------|
-| React | 18.2.0 | UI library with hooks | [Docs](https://react.dev) |
-| React Router DOM | 6.15.0 | Client-side routing | [Docs](https://reactrouter.com) |
-| Axios | 1.5.0 | HTTP client | [Docs](https://axios-http.com) |
-| Vite | 4.4.5 | Build tool, dev server | [Docs](https://vitejs.dev) |
-| Context API | Built-in | State management | [Docs](https://react.dev/reference/react/createContext) |
-| Playwright | 1.56.1 | E2E testing | [Docs](https://playwright.dev) |
-
-### Backend Technologies
-
-| Technology | Version | Purpose | Documentation |
-|-----------|---------|---------|---------------|
-| Node.js | 16+ | JavaScript runtime | [Docs](https://nodejs.org) |
-| Express.js | 4.18.2 | Web framework | [Docs](https://expressjs.com) |
-| MongoDB | 4.4+ | NoSQL database | [Docs](https://mongodb.com) |
-| Mongoose | 7.5.0 | ODM for MongoDB | [Docs](https://mongoosejs.com) |
-| jsonwebtoken | 9.0.2 | JWT implementation | [Docs](https://github.com/auth0/node-jsonwebtoken) |
-| bcryptjs | 2.4.3 | Password hashing | [Docs](https://github.com/dcodeIO/bcrypt.js) |
-| cors | 2.8.5 | CORS middleware | [Docs](https://github.com/expressjs/cors) |
-| dotenv | 16.3.1 | Env variables | [Docs](https://github.com/motdotla/dotenv) |
-
----
-
-## 📦 Installation
-
-### Prerequisites
-
-Ensure you have the following installed:
-- **Node.js**: v16.0.0 or higher ([Download](https://nodejs.org/))
-- **npm**: v7.0.0 or higher (comes with Node.js)
-- **MongoDB**: v4.4 or higher ([Download](https://www.mongodb.com/try/download/community) or use [Atlas](https://www.mongodb.com/cloud/atlas))
-- **Git**: Latest version ([Download](https://git-scm.com/downloads))
-
-### Step 1: Clone Repository
-
-```bash
-git clone https://github.com/tanishqsijaria/discussion-forum-website-.git
-cd full-stack-final-project
-```
-
-### Step 2: Backend Setup
-
-```bash
-# Navigate to backend directory
-cd backend
-
-# Install all dependencies
-npm install
-
-# Create environment file
-# Copy the configuration below
-```
-
-Create `.env` file in `backend/` directory:
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=5000
-
-# Database Configuration
-MONGO_URI=mongodb://localhost:27017/discussion-forum
-# For MongoDB Atlas:
-# MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/discussion-forum
-
-# JWT Configuration
-JWT_SECRET=your_super_secret_jwt_key_min_32_characters_change_in_production
-JWT_EXPIRE=30d
-
-# CORS Configuration (optional)
-CORS_ORIGIN=http://localhost:3000
-```
-
-### Step 3: Frontend Setup
-
-```bash
-# Navigate to frontend directory (from project root)
-cd ../frontend
-
-# Install all dependencies
-npm install
-```
-
----
-
-## 🚀 Running the Application
-
-### Development Mode (Recommended for Development)
-
-You''ll need two terminal windows:
-
-**Terminal 1 - Start Backend Server:**
-```bash
-cd backend
-npm run dev
-
-# Output:
-# [nodemon] starting `node server.js`
-# Server running on port 5000
-# MongoDB Connected: localhost
-```
-
-**Terminal 2 - Start Frontend Dev Server:**
-```bash
-cd frontend
-npm run dev
-
-# Output:
-# VITE v4.4.5  ready in 543 ms
-# ➜  Local:   http://localhost:3000/
-# ➜  Network: use --host to expose
-```
-
-### Access the Application
-
-Open your browser and navigate to:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000/api
-- **Health Check**: http://localhost:5000/health (if implemented)
-
-### Production Mode
-
-#### Step 1: Build Frontend
-```bash
-cd frontend
-npm run build
-
-# Output:
-# vite v4.4.5 building for production...
-# ✓ built in 2.45s
-# dist/index.html                   0.50 kB
-# dist/assets/index-a1b2c3d4.js   156.78 kB │ gzip: 49.23 kB
-# dist/assets/index-e5f6g7h8.css    7.89 kB │ gzip: 2.34 kB
-```
-
-#### Step 2: Start Production Server
-```bash
-cd backend
-NODE_ENV=production npm start
-
-# Server serves both API and frontend static files
-# Access at: http://localhost:5000
-```
-
----
-
-## ⚙️ Configuration
-
-### Environment Variables Reference
-
-#### Backend Configuration (.env)
-
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `NODE_ENV` | Yes | development | Environment mode |
-| `PORT` | No | 5000 | Server port |
-| `MONGO_URI` | Yes | - | MongoDB connection string |
-| `JWT_SECRET` | Yes | - | Secret key for JWT signing (min 32 chars) |
-| `JWT_EXPIRE` | No | 30d | Token expiration time |
-| `CORS_ORIGIN` | No | * | Allowed CORS origin |
-
-#### Frontend Configuration
-
-Update `frontend/src/services/api.js` for production:
-```javascript
-const api = axios.create({
-  baseURL: process.env.NODE_ENV === ''production'' 
-    ? ''https://your-domain.com/api''
-    : ''http://localhost:5000/api'',
-});
-```
+</details>
 
 ---
 
 ## 🧪 Testing
 
+<div align="center">
+
 ### End-to-End Testing with Playwright
 
-The project includes comprehensive E2E tests using Playwright.
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
 
-#### Run All Tests
+</div>
+
 ```bash
 cd frontend
+
+# Run all tests
 npm run test:e2e
-```
 
-#### Interactive UI Mode
-```bash
+# Interactive UI mode
 npx playwright test --ui
-```
 
-#### Run Specific Test File
-```bash
+# Specific test file
 npx playwright test tests/e2e.spec.js
-```
 
-#### Generate HTML Report
-```bash
+# Generate report
 npx playwright show-report
-```
-
-#### Playwright Configuration
-
-Located in `frontend/playwright.config.js`:
-```javascript
-export default defineConfig({
-  testDir: ''./tests'',
-  timeout: 60_000,
-  retries: 0,
-  use: {
-    baseURL: ''http://localhost:3000'',
-    headless: true,
-  },
-  webServer: [
-    {
-      command: ''node server.js'',
-      port: 5000,
-      cwd: ''../backend'',
-    },
-    {
-      command: ''npm run dev'',
-      port: 3000,
-    }
-  ],
-});
 ```
 
 ---
 
-## ⚡ Performance Optimization
+## 📁 Project Structure
 
-### Frontend Optimizations
+<details>
+<summary><b>📂 View Complete File Structure</b></summary>
 
-✅ **Implemented:**
-- Vite for instant HMR and fast builds
-- Code splitting (route-based automatic)
-- Tree shaking (eliminates unused code)
-- Minification (Terser for JS, cssnano for CSS)
-- Asset optimization
-- React.memo on PostCard component
+```
+full-stack-final-project/
+│
+├── 📁 backend/                      # Backend Node.js application
+│   ├── 📁 config/
+│   │   └── db.js                   # MongoDB connection
+│   ├── 📁 controllers/
+│   │   ├── authController.js       # Auth logic
+│   │   └── postController.js       # Post operations
+│   ├── 📁 middleware/
+│   │   └── authMiddleware.js       # JWT verification
+│   ├── 📁 models/
+│   │   ├── User.js                 # User schema
+│   │   └── Post.js                 # Post schema
+│   ├── 📁 routes/
+│   │   ├── authRoutes.js           # Auth endpoints
+│   │   └── postRoutes.js           # Post endpoints
+│   ├── 📄 .env                     # Environment variables
+│   ├── 📄 package.json             # Dependencies
+│   └── 📄 server.js                # Entry point
+│
+├── 📁 frontend/                     # Frontend React application
+│   ├── 📁 public/
+│   │   ├── 🖼️ Clans.png
+│   │   ├── 🖼️ Events.png
+│   │   ├── 🖼️ Forums.png
+│   │   ├── 🖼️ Home.png
+│   │   ├── 🖼️ Login.png
+│   │   ├── 🖼️ News.png
+│   │   ├── 🖼️ Signup.png
+│   │   └── 🖼️ Streams.png
+│   ├── 📁 src/
+│   │   ├── 📁 components/
+│   │   │   ├── CreatePostForm.jsx
+│   │   │   ├── PostCard.jsx
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   └── Sidebar.jsx
+│   │   ├── 📁 context/
+│   │   │   └── AuthContext.jsx
+│   │   ├── 📁 pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   ├── Streams.jsx
+│   │   │   ├── Forums.jsx
+│   │   │   ├── News.jsx
+│   │   │   ├── Events.jsx
+│   │   │   └── Clans.jsx
+│   │   ├── 📁 services/
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── 📁 tests/
+│   │   ├── e2e.spec.js
+│   │   └── flows.spec.js
+│   ├── 📄 playwright.config.js
+│   ├── 📄 package.json
+│   └── 📄 vite.config.js
+│
+└── 📄 README.md                    # This file
+```
 
-**Build Metrics:**
-- Main bundle: ~150KB (gzipped)
-- CSS bundle: ~8KB (gzipped)
-- Initial load time: <2s
-- Time to Interactive: <3s
-
-### Backend Optimizations
-
-✅ **Implemented:**
-- MongoDB indexes (username, email)
-- Query population (single database call)
-- Sorted queries (createdAt: -1)
-- CORS middleware
-
-⚠️ **Recommended for Production:**
-- Connection pooling (increase maxPoolSize to 20)
-- Redis caching layer
-- Compression middleware (gzip/brotli)
-- CDN for static assets
+</details>
 
 ---
 
 ## 🌐 Deployment
 
-### MongoDB Atlas Setup (Recommended)
+<div align="center">
 
-1. **Create Free Account**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. **Create Cluster**: Choose free tier (M0)
-3. **Create Database User**: Database Access → Add New User
-4. **Whitelist IP**: Network Access → Add IP Address (0.0.0.0/0 for dev)
-5. **Get Connection String**: Clusters → Connect → Connect Your Application
-   ```
-   mongodb+srv://<username>:<password>@cluster.mongodb.net/discussion-forum
-   ```
-6. **Update .env**: Set `MONGO_URI` with your connection string
+### Deployment Options
 
-### Deployment Platforms
+</div>
 
-#### Option 1: Heroku (Full Stack)
+<table>
+<tr>
+<td width="33%" align="center">
+
+**🔷 Heroku**
+
+Full-stack deployment
+
+[![Deploy to Heroku](https://img.shields.io/badge/Deploy-Heroku-430098?style=for-the-badge&logo=heroku)](https://heroku.com)
+
+</td>
+<td width="33%" align="center">
+
+**🟣 Render**
+
+Easy deployment
+
+[![Deploy to Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render)](https://render.com)
+
+</td>
+<td width="33%" align="center">
+
+**⚫ Vercel**
+
+Frontend hosting
+
+[![Deploy to Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>📦 Heroku Deployment Steps</b></summary>
 
 ```bash
 # Install Heroku CLI
@@ -1049,7 +864,7 @@ heroku create your-app-name
 
 # Set environment variables
 heroku config:set MONGO_URI=your_mongodb_atlas_uri
-heroku config:set JWT_SECRET=your_secret_key_min_32_chars
+heroku config:set JWT_SECRET=your_secret_key
 heroku config:set NODE_ENV=production
 
 # Deploy
@@ -1059,299 +874,182 @@ git push heroku main
 heroku open
 ```
 
-#### Option 2: Render (Recommended)
+</details>
 
-1. Connect GitHub repository
-2. Create New Web Service
-3. **Build Command**: `cd frontend && npm install && npm run build && cd ../backend && npm install`
-4. **Start Command**: `cd backend && npm start`
-5. Add environment variables
-6. Deploy
+<details>
+<summary><b>☁️ MongoDB Atlas Setup</b></summary>
 
-#### Option 3: Vercel (Frontend) + Heroku (Backend)
+1. Create account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+2. Create a free cluster (M0)
+3. Create database user
+4. Whitelist IP address (0.0.0.0/0 for testing)
+5. Get connection string
+6. Update `MONGO_URI` in `.env`
 
-**Frontend (Vercel):**
-```bash
-npm install -g vercel
-cd frontend
-vercel
-# Update api.js baseURL to backend URL
-```
-
-**Backend (Heroku):**
-Follow Heroku instructions above
-
----
-
-## 📁 Project Structure
-
-```
-full-stack-final-project/
-│
-├── backend/                           # Backend Node.js application
-│   ├── config/
-│   │   └── db.js                     # MongoDB connection configuration
-│   ├── controllers/
-│   │   ├── authController.js         # Authentication logic (signup, login)
-│   │   └── postController.js         # Post operations (create, get, comment)
-│   ├── middleware/
-│   │   └── authMiddleware.js         # JWT token verification middleware
-│   ├── models/
-│   │   ├── User.js                   # User schema with password hashing
-│   │   └── Post.js                   # Post schema with embedded comments
-│   ├── routes/
-│   │   ├── authRoutes.js             # Auth API endpoints
-│   │   └── postRoutes.js             # Post API endpoints
-│   ├── .env                          # Environment variables (not in repo)
-│   ├── package.json                  # Backend dependencies
-│   └── server.js                     # Express app entry point
-│
-├── frontend/                          # Frontend React application
-│   ├── public/
-│   │   ├── Clans.png                 # Application screenshot - Clans page
-│   │   ├── Events.png                # Application screenshot - Events page
-│   │   ├── Forums.png                # Application screenshot - Forums page
-│   │   ├── Home.png                  # Application screenshot - Home page
-│   │   ├── Login.png                 # Application screenshot - Login page
-│   │   ├── News.png                  # Application screenshot - News page
-│   │   ├── Signup.png                # Application screenshot - Signup page
-│   │   └── Streams.png               # Application screenshot - Streams page
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── CreatePostForm.jsx    # Form for creating new posts
-│   │   │   ├── PostCard.jsx          # Post display card component
-│   │   │   ├── ProtectedRoute.jsx    # Route guard for authentication
-│   │   │   └── Sidebar.jsx           # Sidebar with trending content
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx       # Global auth state management
-│   │   ├── pages/
-│   │   │   ├── Home.jsx              # Home dashboard with hero section
-│   │   │   ├── Login.jsx             # Login page
-│   │   │   ├── Signup.jsx            # Registration page
-│   │   │   ├── Streams.jsx           # Live streams page
-│   │   │   ├── Forums.jsx            # Discussion forums page
-│   │   │   ├── News.jsx              # Gaming news page
-│   │   │   ├── Events.jsx            # Gaming events page
-│   │   │   └── Clans.jsx             # Gaming clans page
-│   │   ├── services/
-│   │   │   └── api.js                # Axios instance with interceptors
-│   │   ├── App.jsx                   # Root component with routing
-│   │   ├── main.jsx                  # React entry point
-│   │   └── index.css                 # Global styles and theme
-│   ├── tests/
-│   │   ├── e2e.spec.js               # End-to-end test suite
-│   │   └── flows.spec.js             # User flow tests
-│   ├── playwright.config.js          # Playwright test configuration
-│   ├── package.json                  # Frontend dependencies
-│   └── vite.config.js                # Vite build configuration
-│
-├── .gitignore                         # Git ignore rules
-└── README.md                          # This documentation file
-```
+</details>
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please follow these guidelines:
+<div align="center">
 
-### Development Workflow
+We welcome contributions! 🎉
+
+[![Contributors](https://img.shields.io/github/contributors/tanishqsijaria/discussion-forum-website-?style=for-the-badge)](https://github.com/tanishqsijaria/discussion-forum-website-/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/tanishqsijaria/discussion-forum-website-?style=for-the-badge)](https://github.com/tanishqsijaria/discussion-forum-website-/network/members)
+[![Stars](https://img.shields.io/github/stars/tanishqsijaria/discussion-forum-website-?style=for-the-badge)](https://github.com/tanishqsijaria/discussion-forum-website-/stargazers)
+[![Issues](https://img.shields.io/github/issues/tanishqsijaria/discussion-forum-website-?style=for-the-badge)](https://github.com/tanishqsijaria/discussion-forum-website-/issues)
+
+</div>
+
+### How to Contribute
 
 1. **Fork** the repository
-2. **Clone** your fork:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/discussion-forum-website-.git
-   ```
-3. **Create** a feature branch:
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-4. **Make** your changes
-5. **Test** your changes:
-   ```bash
-   npm run test:e2e
-   npm run lint
-   ```
-6. **Commit** using conventional commits:
-   ```bash
-   git commit -m "feat: add amazing feature"
-   ```
-7. **Push** to your fork:
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-8. **Create** a Pull Request
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** changes (`git commit -m 'feat: Add AmazingFeature'`)
+4. **Push** to branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
 
-### Commit Message Convention
+### Commit Convention
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/):
 
-- `feat:` New feature
-- `fix:` Bug fix
-- `docs:` Documentation only changes
-- `style:` Code style (formatting, semicolons, etc.)
-- `refactor:` Code refactoring
-- `perf:` Performance improvements
-- `test:` Adding or updating tests
-- `chore:` Maintenance tasks
-
-### Code Style
-
-- **JavaScript**: ES6+ syntax, async/await
-- **React**: Functional components with hooks
-- **Indentation**: 2 spaces
-- **Quotes**: Single quotes for JS, double quotes for JSX attributes
-- **Naming**: camelCase for variables/functions, PascalCase for components
+- `feat:` ✨ New feature
+- `fix:` 🐛 Bug fix
+- `docs:` 📝 Documentation
+- `style:` 💄 Formatting
+- `refactor:` ♻️ Code refactoring
+- `test:` ✅ Tests
+- `chore:` 🔧 Maintenance
 
 ---
 
 ## 🔧 Troubleshooting
 
-### Common Issues & Solutions
+<details>
+<summary><b>❌ MongoDB Connection Failed</b></summary>
 
-#### Issue 1: MongoDB Connection Failed
+**Error:** `MongooseServerSelectionError: connect ECONNREFUSED`
 
-**Error**: `MongooseServerSelectionError: connect ECONNREFUSED ::1:27017`
-
-**Solutions**:
+**Solutions:**
 ```bash
-# Check if MongoDB is running (Windows)
+# Windows: Start MongoDB
 net start MongoDB
 
-# Check if MongoDB is running (Mac/Linux)
-sudo systemctl status mongod
+# Mac/Linux: Start MongoDB
+sudo systemctl start mongod
 
-# Verify connection string in .env
+# Verify connection string
 MONGO_URI=mongodb://localhost:27017/discussion-forum
 ```
 
-#### Issue 2: CORS Errors
+</details>
 
-**Error**: `Access-Control-Allow-Origin header is missing`
+<details>
+<summary><b>❌ CORS Errors</b></summary>
 
-**Solution** (backend/server.js):
+**Error:** `Access-Control-Allow-Origin header is missing`
+
+**Solution:**
 ```javascript
-const cors = require(''cors'');
+// backend/server.js
 app.use(cors({
-  origin: ''http://localhost:3000'',
+  origin: 'http://localhost:3000',
   credentials: true
 }));
 ```
 
-#### Issue 3: JWT Token Invalid
+</details>
 
-**Error**: `JsonWebTokenError: invalid signature`
+<details>
+<summary><b>❌ Port Already in Use</b></summary>
 
-**Solutions**:
-1. Clear browser localStorage:
-   ```javascript
-   localStorage.clear();
-   ```
-2. Ensure JWT_SECRET is consistent in .env
-3. Re-login to get new token
+**Error:** `EADDRINUSE: address already in use :::5000`
 
-#### Issue 4: Port Already in Use
-
-**Error**: `Error: listen EADDRINUSE: address already in use :::5000`
-
-**Solution (Windows)**:
+**Solution (Windows):**
 ```powershell
-# Find process using port 5000
+# Find process
 netstat -ano | findstr :5000
 
-# Kill the process
+# Kill process
 taskkill /PID <PID_NUMBER> /F
 ```
+
+</details>
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+<div align="center">
 
-```
-MIT License
+This project is licensed under the **MIT License**
 
-Copyright (c) 2024 Tanishq Sijaria
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+See [LICENSE](LICENSE) file for details
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+</div>
 
 ---
 
-## 👥 Authors & Maintainers
+## 👨‍💻 Author
 
-**Tanishq Sijaria**
-- GitHub: [@tanishqsijaria](https://github.com/tanishqsijaria)
-- LinkedIn: [Connect on LinkedIn](https://linkedin.com/in/tanishqsijaria)
-- Email: [Contact via GitHub](https://github.com/tanishqsijaria)
+<div align="center">
+
+### Tanishq Sijaria
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/tanishqsijaria)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/tanishqsijaria)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/tanishqsijaria)
+
+</div>
 
 ---
 
 ## 🙏 Acknowledgments
 
-Special thanks to the open-source community and the following projects:
+<div align="center">
 
-- **MongoDB**: For the excellent NoSQL database and comprehensive documentation
-- **Express.js**: For the minimalist and flexible web framework
-- **React Team**: For revolutionizing frontend development
-- **Vite Team**: For the incredibly fast build tooling
-- **Playwright**: For robust end-to-end testing capabilities
-- **Axios**: For the elegant HTTP client
-- **bcrypt.js**: For secure password hashing
-- **jsonwebtoken**: For JWT implementation
+Special thanks to the amazing open-source community!
 
-Additional Resources:
-- [MongoDB University](https://university.mongodb.com/) - Free MongoDB courses
-- [React Documentation](https://react.dev) - Official React docs
-- [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
-- [JWT.io](https://jwt.io/) - JWT debugger and documentation
+**Powered By:**
 
----
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express)](https://expressjs.com/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 
-## 📞 Support & Contact
+**Additional Libraries:**
+- [Vite](https://vitejs.dev/) - Lightning fast build tool
+- [Playwright](https://playwright.dev/) - E2E testing framework
+- [Axios](https://axios-http.com/) - HTTP client
+- [bcrypt.js](https://github.com/dcodeIO/bcrypt.js) - Password hashing
+- [JWT](https://jwt.io/) - JSON Web Tokens
 
-### Get Help
-
-- **Issues**: [Report bugs or request features](https://github.com/tanishqsijaria/discussion-forum-website-/issues)
-- **Discussions**: [Join community discussions](https://github.com/tanishqsijaria/discussion-forum-website-/discussions)
-- **Pull Requests**: [Contribute to the project](https://github.com/tanishqsijaria/discussion-forum-website-/pulls)
-
-### Useful Links
-
-- **Repository**: [GitHub Repository](https://github.com/tanishqsijaria/discussion-forum-website-)
-- **Live Demo**: Coming soon
-- **Documentation**: This README
-- **Changelog**: [View Releases](https://github.com/tanishqsijaria/discussion-forum-website-/releases)
+</div>
 
 ---
 
 <div align="center">
 
-## 🎮 Built for Gamers, by Gamers
+## 💬 Support & Contact
 
-**Powered by the MERN Stack**
-
-React · Express · MongoDB · Node.js · Vite · Playwright
+[![Issues](https://img.shields.io/badge/Issues-Report%20Bug-red?style=for-the-badge&logo=github)](https://github.com/tanishqsijaria/discussion-forum-website-/issues)
+[![Discussions](https://img.shields.io/badge/Discussions-Q%26A-blue?style=for-the-badge&logo=github)](https://github.com/tanishqsijaria/discussion-forum-website-/discussions)
+[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Contribute-green?style=for-the-badge&logo=github)](https://github.com/tanishqsijaria/discussion-forum-website-/pulls)
 
 ---
 
 ### ⭐ Star this repository if you find it helpful!
+
+**Built with ❤️ for the Gaming Community**
+
+React • Express • MongoDB • Node.js
+
+---
+
+*© 2024 Tanishq Sijaria. All rights reserved.*
 
 </div>

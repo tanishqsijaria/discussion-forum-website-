@@ -34,10 +34,21 @@ const Login = () => {
   };
 
   return (
-    <div className="login-page">
-      <h1>Login</h1>
-      {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+    <div 
+      className="login-page"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&h=800&fit=crop&auto=format&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        position: 'relative'
+      }}
+    >
+      <div className="auth-page-overlay"></div>
+      <div className="auth-page-content">
+        <h1>Login</h1>
+        {error && <div className="error">{error}</div>}
+        <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input
@@ -58,10 +69,11 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" disabled={loading}>
-          {loading ? 'Logging in...' : 'Login'}
-        </button>
-      </form>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Logging in...' : 'Login'}
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

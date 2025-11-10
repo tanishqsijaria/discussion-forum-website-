@@ -5,7 +5,17 @@ const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        minHeight: '50vh',
+        color: 'var(--text-muted)'
+      }}>
+        Loading...
+      </div>
+    );
   }
 
   if (!user) {

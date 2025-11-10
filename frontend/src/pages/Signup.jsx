@@ -35,10 +35,21 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-page">
-      <h1>Sign Up</h1>
-      {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+    <div 
+      className="signup-page"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=800&fit=crop&auto=format&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        position: 'relative'
+      }}
+    >
+      <div className="auth-page-overlay"></div>
+      <div className="auth-page-content">
+        <h1>Sign Up</h1>
+        {error && <div className="error">{error}</div>}
+        <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username:</label>
           <input
@@ -69,10 +80,11 @@ const Signup = () => {
             required
           />
         </div>
-        <button type="submit" disabled={loading}>
-          {loading ? 'Signing up...' : 'Sign Up'}
-        </button>
-      </form>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Signing up...' : 'Sign Up'}
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
